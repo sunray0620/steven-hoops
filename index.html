@@ -421,13 +421,34 @@
     }
 
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       padding: 12px 22px;
       border-radius: 10px;
       font-weight: 700;
       font-size: .95rem;
       border: 1px solid var(--border);
       transition: transform .12s, background .2s;
+    }
+
+    .btn svg {
+      flex: none;
+    }
+
+    .yt-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 5px;
+      padding: 3px 4px;
+      flex: none;
+    }
+
+    .yt-badge svg {
+      display: block;
     }
 
     .btn:hover {
@@ -569,6 +590,62 @@
       font-weight: 700;
     }
 
+    /* 手机端：表格行拆成卡片，每格前面显示列名，不再横向滚动 */
+    @media (max-width: 640px) {
+      .table-wrap {
+        overflow-x: visible;
+        border: 0;
+        border-radius: 0;
+        margin-top: 0;
+      }
+
+      table {
+        min-width: 0;
+      }
+
+      /* 隐藏表头（仅视觉隐藏，屏幕阅读器仍可用） */
+      thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+      }
+
+      tbody tr {
+        display: block;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 6px 4px;
+        margin-bottom: 12px;
+      }
+
+      tbody td {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 8px 14px;
+        white-space: normal;
+        text-align: right;
+      }
+
+      tbody td:first-child {
+        white-space: normal;
+      }
+
+      tbody td::before {
+        content: attr(data-label);
+        flex: none;
+        text-align: left;
+        color: var(--muted);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: .72rem;
+        letter-spacing: .06em;
+      }
+    }
+
     /* ---------- List ---------- */
     .list {
       list-style: none;
@@ -703,8 +780,15 @@
           <span class="chip"><b>SAT</b> 1,510</span>
         </div>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://youtu.be/WEgPXgbJdX0" target="_blank" rel="noopener">▶ Watch on
-            YouTube</a>
+          <a class="btn btn-primary" href="https://youtu.be/WEgPXgbJdX0" target="_blank" rel="noopener">
+            <span class="yt-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#FF0000"
+                  d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8Z" />
+                <path fill="#fff" d="M9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" />
+              </svg>
+            </span>
+            Watch on YouTube</a>
           <a class="btn btn-ghost" href="#film">More Highlights ↓</a>
           <a class="btn btn-ghost" href="#contact">Contact</a>
         </div>
@@ -756,20 +840,20 @@
           </thead>
           <tbody>
             <tr>
-              <td>2025-26</td>
-              <td>Sophomore</td>
-              <td>Varsity</td>
-              <td>Brent Merritt</td>
-              <td class="up">14.6</td>
-              <td>Broke school record for most 3s made in a game (9)</td>
+              <td data-label="Season">2025-26</td>
+              <td data-label="Grade">Sophomore</td>
+              <td data-label="Level">Varsity</td>
+              <td data-label="Head Coach">Brent Merritt</td>
+              <td data-label="PPG" class="up">14.6</td>
+              <td data-label="Highlights">Broke school record for most 3s made in a game (9)</td>
             </tr>
             <tr>
-              <td>2024-25</td>
-              <td>Freshman</td>
-              <td>Varsity</td>
-              <td>Brent Merritt</td>
-              <td>8.1</td>
-              <td>Sharpshooter · Scholar Athlete · Most Improved · State Qualifier</td>
+              <td data-label="Season">2024-25</td>
+              <td data-label="Grade">Freshman</td>
+              <td data-label="Level">Varsity</td>
+              <td data-label="Head Coach">Brent Merritt</td>
+              <td data-label="PPG">8.1</td>
+              <td data-label="Highlights">Sharpshooter · Scholar Athlete · Most Improved · State Qualifier</td>
             </tr>
           </tbody>
         </table>
@@ -790,12 +874,12 @@
           </thead>
           <tbody>
             <tr>
-              <td>2025</td>
-              <td>Freshman</td>
-              <td>Seattle Rotary — EYBL</td>
-              <td>Jamal Crawford</td>
-              <td>11.0</td>
-              <td>Recognized as the most effective player for 2 sessions</td>
+              <td data-label="Season">2025</td>
+              <td data-label="Grade">Freshman</td>
+              <td data-label="Team">Seattle Rotary — EYBL</td>
+              <td data-label="Head Coach">Jamal Crawford</td>
+              <td data-label="PPG">11.0</td>
+              <td data-label="Highlights">Recognized as the most effective player for 2 sessions</td>
             </tr>
           </tbody>
         </table>
@@ -902,10 +986,31 @@
           posted
           on Instagram — updated throughout the season.</p>
         <div class="cta-row" style="justify-content:center">
-          <a class="btn btn-primary" href="https://youtu.be/WEgPXgbJdX0" target="_blank" rel="noopener">▶
+          <a class="btn btn-primary" href="https://youtu.be/WEgPXgbJdX0" target="_blank" rel="noopener">
+            <span class="yt-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#FF0000"
+                  d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8Z" />
+                <path fill="#fff" d="M9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" />
+              </svg>
+            </span>
             Watch highlights on YouTube</a>
-          <a class="btn btn-ghost" href="https://instagram.com/stevenhansun" target="_blank" rel="noopener">View on
-            Instagram · @stevenhansun</a>
+          <a class="btn btn-ghost" href="https://instagram.com/stevenhansun" target="_blank" rel="noopener">
+            <svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true">
+              <defs>
+                <linearGradient id="ig-grad" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#feda75" />
+                  <stop offset=".3" stop-color="#fa7e1e" />
+                  <stop offset=".55" stop-color="#d62976" />
+                  <stop offset=".8" stop-color="#962fbf" />
+                  <stop offset="1" stop-color="#4f5bd5" />
+                </linearGradient>
+              </defs>
+              <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig-grad)" />
+              <circle cx="12" cy="12" r="4.2" fill="none" stroke="#fff" stroke-width="1.8" />
+              <circle cx="17.3" cy="6.7" r="1.2" fill="#fff" />
+            </svg>
+            View on Instagram · @stevenhansun</a>
         </div>
       </div>
       <!--
@@ -929,7 +1034,23 @@
           <div class="who">Player</div>
           <div class="name">Steven Sun</div>
           <a href="tel:+14254997500">(425) 499-7500</a>
-          <a href="https://instagram.com/stevenhansun" target="_blank" rel="noopener">Instagram · @stevenhansun</a>
+          <a href="https://instagram.com/stevenhansun" target="_blank" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:7px">
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="flex:none">
+              <defs>
+                <linearGradient id="ig-grad-2" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0" stop-color="#feda75" />
+                  <stop offset=".3" stop-color="#fa7e1e" />
+                  <stop offset=".55" stop-color="#d62976" />
+                  <stop offset=".8" stop-color="#962fbf" />
+                  <stop offset="1" stop-color="#4f5bd5" />
+                </linearGradient>
+              </defs>
+              <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig-grad-2)" />
+              <circle cx="12" cy="12" r="4.2" fill="none" stroke="#fff" stroke-width="1.8" />
+              <circle cx="17.3" cy="6.7" r="1.2" fill="#fff" />
+            </svg>
+            IG · @stevenhansun</a>
         </div>
         <div class="card contact-card">
           <div class="who">Parent / Guardian</div>
