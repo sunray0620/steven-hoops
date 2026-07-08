@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<!--
+==================================================================
+  HOW TO EDIT  (只需改这些地方，改完保存、刷新浏览器即可)
+==================================================================
+  搜索 "REPLACE:" 可跳到需要补充的内容。
+  - 照片：把图片放进 sbb 文件夹，取消对应 <img> 注释并改 src
+  - 换主色：改 :root 里的 --accent（一处改全站）
+  - 想把 YouTube 集锦改成页面内嵌播放：见 #film 区注释
+==================================================================
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 不被搜索引擎收录（有链接的人仍可访问；配合 robots.txt 一起生效） -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Steven Sun — 2028 Point / Combo Guard | Recruiting Profile</title>
+  <meta name="description"
+    content="Steven Sun — Class of 2028 point/combo guard, Eastside Catholic HS &amp; Seattle Rotary EYBL. Highlights, stats, academics, and contact." />
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --surface: #141821;
+      --surface-2: #1c212d;
+      --border: #2a3140;
+      --text: #f2f5fa;
+      --muted: #97a1b2;
+      --accent: #ff6a2b;
+      /* REPLACE: 主强调色（可换成球队色） */
+      --accent-ink: #0b0d12;
+      --radius: 14px;
+      --maxw: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      font-size: .8rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      margin: 0 0 24px;
+      line-height: 1.15;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 28px 0 12px;
+    }
+
+    p.lead {
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    /* ---------- Nav ---------- */
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 13, 18, .9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: .02em;
+      font-size: 1.05rem;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .92rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 720px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .25s ease;
+      }
+
+      .nav-links.open {
+        max-height: 420px;
+      }
+
+      .nav-links a {
+        padding: 14px 20px;
+        border-top: 1px solid var(--border);
+      }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      padding: 48px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    @media (min-width: 760px) {
+      .hero-grid {
+        grid-template-columns: 1.1fr .9fr;
+        gap: 40px;
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 9vw, 4rem);
+      line-height: 1.02;
+      margin: 6px 0 14px;
+      font-weight: 800;
+    }
+
+    .hero h1 .accent {
+      color: var(--accent);
+    }
+
+    .hero .role {
+      font-size: clamp(1rem, 4vw, 1.35rem);
+      color: var(--muted);
+      font-weight: 600;
+      margin: 0 0 22px;
+    }
+
+    .programs {
+      margin: 0 0 24px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .programs div {
+      font-size: .98rem;
+      font-weight: 600;
+    }
+
+    .programs span {
+      display: inline-block;
+      min-width: 96px;
+      color: var(--accent);
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 22px;
+    }
+
+    /* ---------- AP results ---------- */
+    .ap-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 14px;
+    }
+
+    @media (min-width: 720px) {
+      .ap-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .ap-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      transition: border-color .2s, background .2s;
+    }
+
+    .ap-item:hover {
+      border-color: var(--accent);
+      background: var(--surface-2);
+    }
+
+    .ap-item .c {
+      font-weight: 600;
+      font-size: .92rem;
+    }
+
+    .ap-item .s {
+      flex: none;
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    .ap-item.pending .s {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .note-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 26px;
+      margin-top: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .note-bar b {
+      color: var(--text);
+    }
+
+    /* ---------- Experience cards ---------- */
+    .exp-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 760px) {
+      .exp-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .exp-card .kicker {
+      font-size: .72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .exp-card h3 {
+      margin: 6px 0 6px;
+      font-size: 1.15rem;
+    }
+
+    .exp-card .tagline {
+      color: var(--muted);
+      font-size: .92rem;
+      margin: 0 0 12px;
+    }
+
+    .facts {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .facts li {
+      display: flex;
+      gap: 10px;
+      font-size: .92rem;
+    }
+
+    .facts li::before {
+      content: "▸";
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .tag {
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+      border-radius: 999px;
+      padding: 7px 16px;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: .85rem;
+      font-weight: 600;
+    }
+
+    .chip b {
+      color: var(--accent);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .95rem;
+      border: 1px solid var(--border);
+      transition: transform .12s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--accent-ink);
+      border-color: var(--accent);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+    }
+
+    .hero-photo {
+      aspect-ratio: 4/5;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: linear-gradient(160deg, var(--surface-2), var(--surface));
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-align: center;
+      padding: 16px;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ---------- Cards / grids ---------- */
+    .grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .grid.cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      transition: border-color .2s, background .2s;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      background: var(--surface-2);
+    }
+
+    .stat .num {
+      font-size: clamp(1.8rem, 7vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .stat .label {
+      color: var(--muted);
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 8px;
+    }
+
+    .stat .num .u {
+      font-size: .5em;
+      color: var(--muted);
+      font-weight: 700;
+      margin-left: 3px;
+    }
+
+    /* ---------- Film CTA ---------- */
+    .film-cta {
+      text-align: center;
+      padding: 44px 20px;
+    }
+
+    /* ---------- Table ---------- */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 12px 16px;
+      font-size: .9rem;
+      vertical-align: top;
+    }
+
+    thead th {
+      background: var(--surface-2);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: .78rem;
+      white-space: nowrap;
+    }
+
+    tbody tr {
+      border-top: 1px solid var(--border);
+    }
+
+    tbody td:first-child {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    td .up {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ---------- List ---------- */
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+    }
+
+    .list li::before {
+      content: "▸";
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-grid {
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .contact-card .who {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .contact-card .name {
+      font-weight: 700;
+      margin: 4px 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .contact-card a {
+      display: block;
+      color: var(--text);
+      font-size: .92rem;
+      margin: 3px 0;
+      word-break: break-all;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .socials a {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 16px;
+      color: var(--text);
+      font-weight: 600;
+      font-size: .9rem;
+    }
+
+    .socials a:hover {
+      border-color: var(--accent);
+    }
+
+    footer {
+      padding: 32px 0 48px;
+      color: var(--muted);
+      font-size: .85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">STEVEN<span>SUN</span></div>
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false" id="menuBtn">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#stats">Stats</a>
+        <a href="#academics">Academics</a>
+        <a href="#experience">Experience</a>
+        <a href="#awards">Awards</a>
+        <a href="#film">Film</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" style="border-top:none">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Class of 2028</p>
+        <h1>Steven <span class="accent">Sun</span></h1>
+        <p class="role" style="margin-bottom:14px">6'2" · Point / Combo Guard</p>
+        <div class="tags">
+          <span class="tag">Elite Shooter</span>
+          <span class="tag">Playmaker</span>
+          <span class="tag">High IQ</span>
+        </div>
+        <div class="programs">
+          <div><span>HS</span> Eastside Catholic HS, Sammamish WA</div>
+          <div><span>AAU</span> Seattle Rotary EYBL</div>
+        </div>
+        <div class="meta-row" style="margin-bottom:10px">
+          <span class="chip"><b>HT</b> 6'2"</span>
+          <span class="chip"><b>WT</b> 175 lbs</span>
+          <span class="chip"><b>Class</b> 2028</span>
+          <span class="chip"><b>State</b> Washington</span>
+        </div>
+        <div class="meta-row">
+          <span class="chip"><b>GPA</b> 4.0</span>
+          <span class="chip"><b>SAT</b> 1,510</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://youtu.be/WEgPXgbJdX0" target="_blank" rel="noopener">▶ Watch on
+            YouTube</a>
+          <a class="btn btn-ghost" href="#film">More Highlights ↓</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+      <!-- REPLACE: 头像照片。把图片放进 sbb 文件夹，取消下面 img 注释并改 src -->
+      <div class="hero-photo">
+        <!-- <img src="steven.jpg" alt="Steven Sun" /> -->
+        <span>Your photo here<br />(4:5 portrait)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section id="stats">
+    <div class="wrap">
+      <p class="eyebrow">Production</p>
+      <h2>Stats</h2>
+      <div class="grid cols-4">
+        <div class="card stat">
+          <div class="num">14.6</div>
+          <div class="label">PPG · HS 2025-26</div>
+        </div>
+        <div class="card stat">
+          <div class="num">8.1</div>
+          <div class="label">PPG · HS 2024-25</div>
+        </div>
+        <div class="card stat">
+          <div class="num">11.0</div>
+          <div class="label">PPG · EYBL 2025</div>
+        </div>
+        <div class="card stat">
+          <div class="num">41.3<span class="u">%</span></div>
+          <div class="label">3PT Rate</div>
+        </div>
+      </div>
+
+      <h3>High School — Eastside Catholic (Varsity)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Season</th>
+              <th>Grade</th>
+              <th>Level</th>
+              <th>Head Coach</th>
+              <th>PPG</th>
+              <th>Highlights</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025-26</td>
+              <td>Sophomore</td>
+              <td>Varsity</td>
+              <td>Brent Merritt</td>
+              <td class="up">14.6</td>
+              <td>Broke school record for most 3s made in a game (9)</td>
+            </tr>
+            <tr>
+              <td>2024-25</td>
+              <td>Freshman</td>
+              <td>Varsity</td>
+              <td>Brent Merritt</td>
+              <td>8.1</td>
+              <td>Sharpshooter · Scholar Athlete · Most Improved · State Qualifier</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>AAU — Seattle Rotary (EYBL)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Season</th>
+              <th>Grade</th>
+              <th>Team</th>
+              <th>Head Coach</th>
+              <th>PPG</th>
+              <th>Highlights</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025</td>
+              <td>Freshman</td>
+              <td>Seattle Rotary — EYBL</td>
+              <td>Jamal Crawford</td>
+              <td>11.0</td>
+              <td>Recognized as the most effective player for 2 sessions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACADEMICS ============ -->
+  <section id="academics">
+    <div class="wrap">
+      <p class="eyebrow">In the classroom</p>
+      <h2>Academics</h2>
+      <div class="grid cols-4">
+        <div class="card stat">
+          <div class="num">4.0</div>
+          <div class="label">GPA (Unweighted)</div>
+        </div>
+        <div class="card stat">
+          <div class="num">1,510</div>
+          <div class="label">SAT</div>
+        </div>
+        <div class="card stat">
+          <div class="num">10</div>
+          <div class="label">AP Classes (by Junior)</div>
+        </div>
+        <div class="card stat">
+          <div class="num">STEM</div>
+          <div class="label">Intended Major</div>
+        </div>
+      </div>
+
+      <h3>AP exam scores</h3>
+      <div class="ap-grid">
+        <div class="ap-item"><span class="c">AP Pre-Calculus</span><span class="s">5</span></div>
+        <div class="ap-item"><span class="c">AP Physics 1</span><span class="s">5</span></div>
+        <div class="ap-item"><span class="c">AP Calculus</span><span class="s">5</span></div>
+        <div class="ap-item"><span class="c">AP Physics 2</span><span class="s">5</span></div>
+        <div class="ap-item"><span class="c">AP World History</span><span class="s">5</span></div>
+        <!-- REPLACE: 之后新增的 AP 课程/成绩，把下面这张换成真实课程 + 分数 -->
+        <div class="ap-item pending"><span class="c">More AP courses</span><span class="s">SOON</span></div>
+      </div>
+      <div class="note-bar">
+        <span><b>Perfect 5.0</b> on every completed AP exam</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience">
+    <div class="wrap">
+      <p class="eyebrow">Programs</p>
+      <h2>Athletic experience</h2>
+
+      <div class="exp-grid">
+        <div class="card exp-card">
+          <div class="kicker">AAU</div>
+          <h3>Seattle Rotary — Nike EYBL</h3>
+          <p class="tagline">Pacific Northwest's premier AAU club, on the Nike EYBL circuit.</p>
+          <ul class="facts">
+            <li>Coached by <strong>Jamal Crawford</strong> — 20-year NBA guard, 3× Sixth Man of the Year</li>
+            <li>On the team since 6th grade, advancing a level every year</li>
+            <li>Standout guard with Washington media exposure since middle school</li>
+          </ul>
+        </div>
+        <div class="card exp-card">
+          <div class="kicker">High School</div>
+          <h3>Eastside Catholic HS</h3>
+          <p class="tagline">Powerhouse program in the Greater Seattle area.</p>
+          <ul class="facts">
+            <li>Top-5 3A program in Washington State</li>
+            <li>Competes in the Metro League — the area's premier league</li>
+            <li>Head coach: Brent Merritt</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AWARDS ============ -->
+  <section id="awards">
+    <div class="wrap">
+      <p class="eyebrow">Recognition</p>
+      <h2>Achievements &amp; awards</h2>
+      <ul class="list">
+        <li>
+          <div><strong>Metro League Second Team (2025-26)</strong> — earned as a sophomore in the Greater Seattle
+            area's premier high school league.</div>
+        </li>
+        <li>
+          <div><strong>Seattle Rotary — Nike EYBL (2025)</strong> — recognized as the team's most effective player
+            across two sessions on the nation's top AAU circuit.</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ HIGHLIGHT FILM ============ -->
+  <section id="film">
+    <div class="wrap">
+      <p class="eyebrow">Highlight Film</p>
+      <h2>Watch me play</h2>
+      <div class="card film-cta">
+        <p class="lead" style="margin:0 auto 22px">Full highlight tape on YouTube, with more clips and recognitions
+          posted
+          on Instagram — updated throughout the season.</p>
+        <div class="cta-row" style="justify-content:center">
+          <a class="btn btn-primary" href="https://youtu.be/WEgPXgbJdX0" target="_blank" rel="noopener">▶
+            Watch highlights on YouTube</a>
+          <a class="btn btn-ghost" href="https://instagram.com/stevenhansun" target="_blank" rel="noopener">View on
+            Instagram · @stevenhansun</a>
+        </div>
+      </div>
+      <!--
+        想让教练在页面上直接播放（内嵌），把上面的 <div class="card film-cta">…</div> 换成下面这段：
+        <div style="position:relative;width:100%;padding-top:56.25%;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0"
+            src="https://www.youtube.com/embed/WEgPXgbJdX0" title="Highlight film"
+            loading="lazy" allowfullscreen></iframe>
+        </div>
+      -->
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="card contact-card">
+          <div class="who">Player</div>
+          <div class="name">Steven Sun</div>
+          <a href="tel:+14254997500">(425) 499-7500</a>
+          <a href="https://instagram.com/stevenhansun" target="_blank" rel="noopener">Instagram · @stevenhansun</a>
+        </div>
+        <div class="card contact-card">
+          <div class="who">Parent / Guardian</div>
+          <div class="name">Lei Sun</div>
+          <a href="tel:+14256287249">(425) 628-7249</a>
+          <a href="mailto:sunray0620@gmail.com">sunray0620@gmail.com</a>
+        </div>
+        <!--
+        <div class="card contact-card">
+          <div class="who">High School Coach</div>
+          <div class="name">Brent Merritt — Eastside Catholic HS</div>
+          <a href="tel:+12069313127">(206) 931-3127</a>
+          <a href="mailto:bmerritt@eastsidecatholic.org">bmerritt@eastsidecatholic.org</a>
+        </div>
+        <div class="card contact-card">
+          <div class="who">AAU Coach</div>
+          <div class="name">Jamal Crawford — Seattle Rotary (EYBL)</div>
+          <a href="tel:+14254997500">(425) 499-7500</a>
+          <a href="https://instagram.com/stevenhansun" target="_blank" rel="noopener">Instagram · @stevenhansun</a>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 Steven Sun · Basketball Recruiting Profile</div>
+  </footer>
+
+  <script>
+    // 移动端菜单开合（唯一的脚本；禁用 JS 也不影响阅读）
+    (function () {
+      var btn = document.getElementById('menuBtn');
+      var links = document.getElementById('navLinks');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          links.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
